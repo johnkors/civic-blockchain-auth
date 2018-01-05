@@ -1,0 +1,28 @@
+{
+  "name": "civic-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "jsfiles": {
+      "patterns": [
+        "*"
+      ],
+      "extensions": "js,html,json"
+    }
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "start": "node index.js",
+    "jsfiles": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "civic-sip-api": "^1.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "npm-watch": "^0.3.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}

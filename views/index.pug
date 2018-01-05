@@ -1,0 +1,18 @@
+html
+  head
+    link(rel="stylesheet", href="https://hosted-sip.civic.com/css/civic-modal.min.css")
+    script(src="https://hosted-sip.civic.com/js/civic.sip.min.js")
+    title= title
+  body
+    h1= message
+
+    unless email
+        button(id="signupButton", class="civic-button-a medium",type="button")
+            span Log in with Civic   
+    else
+        span Logged in as #{email}
+        div
+            span You can always 
+                a(href="/logout") log out 
+                span of course
+  script(src="/app.js")
