@@ -16,10 +16,7 @@ app.use(session({
     }
 }));
 
-
-
 app.get('/', function (req, res) {
-    console.log(req.session);
     if(!req.session.email){
         res.render('index', { 
             title: 'Hey Anonymous!', 
@@ -32,7 +29,6 @@ app.get('/', function (req, res) {
             email : req.session.email
         });
     }
-   
 });
 
 app.get('/logout', function (req, res) {
@@ -48,8 +44,8 @@ app.get('/exchange-code', (req, res) => {
         res.redirect('/');
     }).catch((error) => {
         console.log(error);
-        res.redirect('/?error');
+        res.redirect('/?error=' + error);
     });
 });
 
-app.listen(8000, () => console.log('Example app listening on port 8000!'))
+app.listen(8000, () => console.log('Running on http://localhost:8000'))
