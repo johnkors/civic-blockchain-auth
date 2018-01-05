@@ -7,7 +7,7 @@ html
     h1= message
 
     unless email
-        button(id="signupButton", class="civic-button-a medium",type="button")
+        button(id="signupButton", class="civic-button-a medium", type="button", data-appId=appId)
             span Log in with Civic   
     else
         span Logged in as #{email}

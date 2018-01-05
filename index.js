@@ -20,7 +20,8 @@ app.get('/', function (req, res) {
     if(!req.session.email){
         res.render('index', { 
             title: 'Hey Anonymous!', 
-            message: 'Why not try to civic your way in?'            
+            message: 'Why not try to civic your way in?',
+            appId: settings.civic.appId
         });
     }else{
         res.render('index', { 

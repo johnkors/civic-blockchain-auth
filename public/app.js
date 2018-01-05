@@ -1,4 +1,6 @@
-var civicSip = new civic.sip({ appId: 'rJ1cWRh7z' });
+
+var appId = document.querySelector('#signupButton').getAttribute('data-appId');
+var civicSip = new civic.sip({ appId: appId });
 
 var button = document.querySelector('#signupButton');
 button.addEventListener('click', function () {
