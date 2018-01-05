@@ -1,11 +1,10 @@
-const settings = require('./settings.dev.json');
+const settings = require('./settings.json');
 const civicSip = require('civic-sip-api');
-console.log(settings);
 const express = require('express');
 const session = require('express-session');
 
 const app = express();
-app.disable('etag');
+
 app.set('view engine', 'pug');
 app.use(express.static('public'));
 app.use(session({

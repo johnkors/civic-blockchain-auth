@@ -1,0 +1,7 @@
+{
+    "civic": {
+        "appId": "<your-app-id>",
+        "appSecret": "<your-app-secret>",
+        "prvKey": "<your-private-signing-key>"
+    }
+}
